@@ -1,42 +1,125 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
-    font-family: 'Roboto', sans-serif; /* New Updated font */
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
+/* Body Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Custom font for branding */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text for readability */
+}
+
+/* Header Styles */
 header {
-    background: #0073e6;
+    background: #0073e6; /* Primary color */
     color: white;
     text-align: center;
     padding: 20px;
+    border-bottom: 4px solid #005bb5; /* Adds a subtle border for depth */
 }
 
+header h1 {
+    font-size: 2.5em; /* Large heading */
+}
+
+header h2 {
+    font-size: 1.5em; /* Subheading */
+    font-weight: 400; /* Normal weight for readability */
+}
+
+header img {
+    width: 250px; /* Image width */
+    border-radius: 0%; /* Circular image */
+}
+
+/* Main Content Styles */
 main {
     padding: 20px;
     max-width: 800px;
-    margin: auto;
+    margin: auto; /* Center the main content */
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack sections vertically */
+    gap: 20px; /* Space between sections */
 }
 
+/* Section Styles */
+section {
+    background: white; /* White background for sections */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+    font-size: 2em; /* Section heading */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #0073e6; /* Underline for emphasis */
+}
+
+/* List Styles */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove padding */
+}
+
+ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+/* Link Styles */
+a {
+    color: #0073e6; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Accessibility Styles */
 a:focus {
-    outline: 2px solid #ffcc00; /* Highlighting/Outlining for accessibility */
+    outline: 2px solid #ffcc00; /* Yellow outline for focus */
 }
 
+/* Footer Styles */
+footer {
+    text-align: center; /* Center footer text */
+    padding: 20px;
+    background: #333; /* Dark background */
+    color: white; /* White text */
+    border-top: 4px solid #005bb5; /* Subtle border for depth */
+}
 
+/* Responsive Design */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 2em;
+        font-size: 2em; /* Adjust heading size for smaller screens */
     }
 
     main {
-        padding: 10px;
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Smaller section headings */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    main {
+        flex-direction: row; /* Change layout for medium screens */
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    section {
+        flex: 1; /* Allow sections to grow */
+        min-width: 300px; /* Minimum width for sections */
     }
 }
