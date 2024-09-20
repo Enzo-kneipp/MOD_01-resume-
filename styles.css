@@ -26,6 +26,11 @@ main {
     margin: auto;
 }
 
+a:focus {
+    outline: 2px solid #ffcc00; /* Highlighting/Outlining for accessibility */
+}
+
+
 @media (max-width: 600px) {
     header h1 {
         font-size: 2em;
